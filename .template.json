@@ -1,0 +1,45 @@
+{
+    "configTemplate": {
+        "description": "Config template allow you modify einar default config keys by your custom config keys allocated on your repository template",
+        "replaceConfigKey": [
+            {
+                "einarConfigKey": "PORT",
+                "customConfigKey": "CUSTOM_KEY_PORT"
+            },
+            {
+                "einarConfigKey": "COUNTRY",
+                "customConfigKey": "custom_key_country"
+            },
+            {
+                "einarConfigKey": "SERVICE",
+                "customConfigKey": "custom.application.service"
+            },
+            {
+                "einarConfigKey": "ENV",
+                "customConfigKey": "any...."
+            }
+        ]
+    },
+    "baseTemplate": {
+        "description": "Base template allow you copy base files based on your private/public gitlab account inside your einar project",
+        "folders": [
+            {
+                "replaceHolders": [
+                    "${project}"
+                ],
+                "sourceDir": "helmchart",
+                "destinationDir": "helmchart"
+            }
+        ],
+        "files": [
+            {
+                "type": "file",
+                "replaceHolders": [
+                    ""
+                ],
+                "sourceDir": "ci/.gitlab-ci.yml",
+                "destinationDir": ".gitlab-ci.yml"
+            }
+        ]
+    }
+}
