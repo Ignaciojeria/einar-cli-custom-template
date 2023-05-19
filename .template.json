@@ -21,7 +21,7 @@
         ]
     },
     "baseTemplate": {
-        "description": "Base template allow you copy base files based on your private/public gitlab account inside your einar project",
+        "description": "Base template allow you copy base files based on your private/public github account inside your einar project",
         "folders": [
             {
                 "replaceHolders": [
